@@ -26,10 +26,10 @@ function! VimPxRemConvert(convert_to, skip_confirmation, start_line, end_line)
 
   " Self explanitory
   if a:convert_to == "px"
-    let search_for = '[\s\v](\d*\.?\d+)rem'
+    let search_for = '\(\d*\.\=\d\+\)rem'
     let conversion_function = "VimPxRemConvertRemToPx"
   elseif a:convert_to == "rem"
-    let search_for = '[\s\v](\d*\.?\d+)px'
+    let search_for = '\(\d*\.\=\d\+\)px'
     let conversion_function = "VimPxRemConvertPxToRem"
   endif
   
