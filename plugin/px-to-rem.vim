@@ -1,11 +1,11 @@
 "vim rem to px
 
 function! VimPxRemConvertPxToRem(px)
-  return substitute(printf("%frem", 1.0/16*a:px),".0*rem$","rem","")
+  return printf("%frem", 1.0/16*a:px)
 endfunction
 
 function! VimPxRemConvertRemToPx(rem)
-  return substitute(printf("%fpx", round(16*str2float(a:rem))),".0*px$","px","")
+  return printf("%fpx", round(16*str2float(a:rem)))
 endfunction
 
 " Converts selected px to rem / vice versa.
