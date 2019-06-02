@@ -10,7 +10,31 @@ Installation
 
 Usage
 -------------------------
-To convert between px and rem, place the cursor over the value in normal mode and hit `<leader>r`.
+To convert px to rem, visual select a bunch of text then:
+
+```
+:Rem
+```
+
+Or enter the following to convert the rem to px:
+
+```
+:Px
+```
+
+To convert all px in the file to rem:
+
+```
+:RemAll
+```
+
+Or to convert all rem in the file to px:
+
+```
+:PxAll
+```
+
+Add a bang (eg. :Px!) to any of the above command to bypass the prompts before each conversion.
 
 If the value is a valid px or rem measurement, it'll be converted.
 
