@@ -1,7 +1,7 @@
 "vim rem to px
 
 function! VimPxRemConvertPxToRem(px)
-  return substitute(printf("%frem", 1.0/16.0*a:px),".0*rem","rem","")
+  return substitute(printf("%frem", a:px/16.0),".0*rem","rem","")
 endfunction
 
 function! VimPxRemConvertRemToPx(rem)
