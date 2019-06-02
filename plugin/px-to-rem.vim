@@ -2,12 +2,12 @@
 
 function! VimPxRemConvertPxToRem(px)
   echo printf("%frem", a:px/16.0)
-  return substitute(printf("%frem", a:px/16.0),"\.0*rem","rem","")
+  return substitute(printf("%frem", a:px/16.0),"0*rem","rem","")
 endfunction
 
 function! VimPxRemConvertRemToPx(rem)
   echo printf("%fpx", 16.0*str2float(a:rem))
-  return substitute(printf("%fpx", 16.0*str2float(a:rem)),"\.0*px","px","")
+  return substitute(printf("%fpx", 16.0*str2float(a:rem)),"0*px","px","")
 endfunction
 
 " Converts selected px to rem / vice versa.
