@@ -1,11 +1,11 @@
 "vim rem to px
 
 function! VimPxRemConvertPxToRem(px)
-  return substitute(substitute(printf("%frem", a:px/16.0),"\(\d*[1-9]\)\=0*rem","\1rem",""),"\.rem","rem","")
+  return substitute(substitute(printf("%frem", a:px/16.0),"0*rem","rem",""),"\.rem","rem","")
 endfunction
 
 function! VimPxRemConvertRemToPx(rem)
-  return substitute(substitute(printf("%fpx", 16.0*str2float(a:rem)),"\(\d*[1-9]\)\=0*px","\1px",""),"\.px","px","")
+  return substitute(substitute(printf("%fpx", 16.0*str2float(a:rem)),"0*px","px",""),"\.px","px","")
 endfunction
 
 " Converts selected px to rem / vice versa.
