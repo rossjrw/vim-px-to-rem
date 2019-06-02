@@ -1,11 +1,11 @@
 "vim rem to px
 
 function! VimPxRemConvertPxToRem(px)
-  return printf("%grem", 1.0/16*a:px)
+  return trim(trim(printf("%frem", 1.0/16*a:px),"0"),".")
 endfunction
 
 function! VimPxRemConvertRemToPx(rem)
-  return printf("%gpx", round(16*str2float(a:rem)))
+  return trim(trim(printf("%fpx", round(16*str2float(a:rem))),"0"),".")
 endfunction
 
 " Converts selected px to rem / vice versa.
@@ -34,7 +34,7 @@ function! VimPxRemConvert(convert_to, skip_confirmation, start_line, end_line)
   endif
   
   " Execute the command
-  execute a:start_line . "," . a:end_line ."s/". search_for . "/" .'\='.conversion_function.'(submatch(1))' . "/" . modifiers
+  execute a:start_line . "," . a:end_line ."s/". search_for . "/" . '\=' . conversion_function . '(submatch(1))' . "/" . modifiers
 endfunction
 
 "Available commands
