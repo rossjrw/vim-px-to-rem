@@ -1,4 +1,4 @@
-**vim-px-to-rem**  -  Convert px to rem or rem to px
+**vim-px-to-rem**
 ==================================
 Makes font-size unit conversion for your CSS stylesheets easy!
 
