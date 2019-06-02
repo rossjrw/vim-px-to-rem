@@ -5,7 +5,7 @@ function! VimPxRemConvertPxToRem(px)
 endfunction
 
 function! VimPxRemConvertRemToPx(rem)
-  return printf("%fpx", round(16.0*str2float(a:rem)))
+  return printf("%fpx", 16.0*str2float(a:rem))
 endfunction
 
 " Converts selected px to rem / vice versa.
